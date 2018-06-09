@@ -1,5 +1,6 @@
 package com.liuaoz.juc.controller.concurrency;
 
+import com.liuaoz.juc.core.annotation.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;
@@ -8,11 +9,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
 /**
- * @Description : TODO
+ * @Description : 使用线程池、信号量、计数器
  * @Author : matrix
  * @Date : created in 2018/6/7 22:58
  */
 @Slf4j
+@NotThreadSafe
 public class ConcurrencyTest {
 
     //请求客户数
@@ -56,13 +58,5 @@ public class ConcurrencyTest {
 
     private static void count() {
         count++;
-    }
-}
-
-class ThreadDemo implements Runnable {
-
-    @Override
-    public void run() {
-
     }
 }
