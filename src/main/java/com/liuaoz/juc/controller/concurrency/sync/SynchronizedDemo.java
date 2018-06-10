@@ -17,7 +17,6 @@ public class SynchronizedDemo {
         synchronized (this) {
             for (int i = 0; i < 10; i++) {
                 log.info("test1--->{}", i);
-
             }
         }
     }
