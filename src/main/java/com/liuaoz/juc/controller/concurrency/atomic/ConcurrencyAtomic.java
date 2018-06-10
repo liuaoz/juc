@@ -1,28 +1,27 @@
-package com.liuaoz.juc.controller.concurrency;
+package com.liuaoz.juc.controller.concurrency.atomic;
 
-import com.liuaoz.juc.core.annotation.NotThreadSafe;
+import com.liuaoz.juc.core.annotation.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @Description : 使用线程池、信号量、计数器
- * @Author : matrix
- * @Date : created in 2018/6/7 22:58
+ * Created by matrix_stone on 2018/6/9.
  */
 @Slf4j
-@NotThreadSafe
-public class ConcurrencyTest {
+@ThreadSafe
+public class ConcurrencyAtomic {
 
     //请求客户数
     public static final int clientTotal = 5000;
     //并发线程数
     public static final int threadTotal = 200;
 
-    public static int count = 0;
+    public static AtomicInteger count = new AtomicInteger(0);
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -53,10 +52,11 @@ public class ConcurrencyTest {
     }
 
     private static void add() {
-        count++;
+        count.incrementAndGet();
     }
 
     private static void count() {
-        count++;
+        count.incrementAndGet();
     }
+
 }
