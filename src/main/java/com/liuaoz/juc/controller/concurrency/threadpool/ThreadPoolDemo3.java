@@ -28,13 +28,11 @@ public class ThreadPoolDemo3 {
 
         Timer timer = new Timer("test");
 
-        TimerTask timerTask = new TimerTask() {
+        timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 log.info("xxxx");
             }
-        };
-
-        timer.scheduleAtFixedRate(timerTask, 1L, 3L);
+        }, 1L, 3L);
     }
 }
