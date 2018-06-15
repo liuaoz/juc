@@ -1,4 +1,4 @@
-package com.liuaoz.juc.controller.concurrency.mq;
+package com.liuaoz.juc.controller.highconcurrency.mq;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
