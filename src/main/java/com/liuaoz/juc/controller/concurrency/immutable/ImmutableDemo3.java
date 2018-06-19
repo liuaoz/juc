@@ -19,13 +19,13 @@ public class ImmutableDemo3 {
 
     private static ImmutableSet<Integer> immutableSet = ImmutableSet.copyOf(immutableList);
 
-    private static ImmutableMap<Integer,Integer> immutableMap = ImmutableMap.of(1,11,2,22);
+    private static ImmutableMap<Integer, Integer> immutableMap = ImmutableMap.of(1, 11, 2, 22);
 
     public static void main(String[] args) {
         log.info(String.valueOf(immutableMap.get(1)));
-        immutableMap.put(3,33);
-//        immutableSet.add(3);
-//        immutableList.add(3);
+        //        immutableMap.put(3,33);
+        //        immutableSet.add(3);
+        //        immutableList.add(3);
     }
 
 }

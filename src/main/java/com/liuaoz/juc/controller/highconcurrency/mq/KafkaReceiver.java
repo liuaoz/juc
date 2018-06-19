@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class KafkaReceiver {
 
-    @KafkaListener(topics = {TopicConstants.TEST})
+    //    @KafkaListener(topics = {TopicConstants.TEST})
     public void receive(ConsumerRecord<?, ?> record) {
         log.info("receiver:{}", record);
     }

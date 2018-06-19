@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * Created by matrix_stone on 2018/6/11.
  */
-@Configuration
+//@Configuration
 @Slf4j
 public class WebMvcConfg implements WebMvcConfigurer {
 

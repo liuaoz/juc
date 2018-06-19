@@ -7,13 +7,13 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class JucApplication{
+public class JucApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(JucApplication.class, args);
     }
 
-    @Bean
+    //    @Bean
     public FilterRegistrationBean httpFilter() {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
         filterRegistrationBean.setFilter(new HttpFilter());
